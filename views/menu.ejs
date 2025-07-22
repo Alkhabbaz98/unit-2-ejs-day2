@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+<%- include('./menu.ejs') %>
+  <h1>Full Menu</h1>
+<% menu.forEach((list) => { %>
+    <p><%= list.name %></p>
+    <p><%= list.price %></p>
+    <p><%= list.rating %></p>
+    <p><%= list.details %></p>
+<%}); %>
+<!-- The loop above is probably wrong because it is infinite looping and not sure why. -->
+</body>
+</html>
+
+
