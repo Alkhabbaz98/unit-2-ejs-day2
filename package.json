@@ -14,5 +14,13 @@
     "express": "^5.1.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alkhabbaz98/unit-2-ejs-day2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alkhabbaz98/unit-2-ejs-day2/issues"
+  },
+  "homepage": "https://github.com/Alkhabbaz98/unit-2-ejs-day2#readme",
   "description": ""
 }

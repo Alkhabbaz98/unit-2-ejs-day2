@@ -63,19 +63,29 @@ app.get('/', (req , res) => {
     res.render("home.ejs", RestObj)
 })
 
-// app.get('/menu', (req , res) => {
-//   menuObj = {
-//     menu: RESTAURANT.menu
-//   }
-//   res.render("menu.ejs", menuObj)
+// this is also another solution: 
+// app.get('/', (req, res) => { 
+//   res.render("home.ejs", {myRESTAURANT: RESTAURANT})
 // })
+
+
+// -----------------------------------
+app.get('/menu', (req , res) => {
+  menuObj = {
+    menu: RESTAURANT.menu
+  }
+  res.render("menu.ejs", menuObj)
+})
 // the one above is not working correctly but this is what i did. 
 
 // last part (couldn't figure it out)
-app.get('/menu/:category', (req , res){
-
-
-  res.render("category.ejs", )
+app.get('/menu/:category', (req , res) => {
+  const category = req.params.category;
+  const itemMenu = RESTAURANT.menu.filter((item)=> item.category === category)
+  res.render("category.ejs",{
+    category: category,
+    itemMenu: itemMenu,
+  } )
 })
 
 

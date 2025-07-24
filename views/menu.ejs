@@ -6,13 +6,12 @@
   <title>Menu</title>
 </head>
 <body>
-<%- include('./menu.ejs') %>
   <h1>Full Menu</h1>
-<% menu.forEach((list) => { %>
-    <p><%= list.name %></p>
-    <p><%= list.price %></p>
-    <p><%= list.rating %></p>
-    <p><%= list.details %></p>
+<% menu.forEach((myMenu) => { %>
+    <p><%= myMenu.name %></p>
+    <p><%= myMenu.price %></p>
+    <p><%= myMenu.rating %></p>
+    <p><%= myMenu.details %></p>
 <%}); %>
 <!-- The loop above is probably wrong because it is infinite looping and not sure why. -->
 </body>
